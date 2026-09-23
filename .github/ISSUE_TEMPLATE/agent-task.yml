@@ -1,0 +1,28 @@
+name: Agent task
+description: Small disposable task for harness bakeoff experiments
+title: "[agent] "
+labels: ["agent-task"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should the agent accomplish?
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: Observable stop condition
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: No production credentials or HomeLife data
+          required: true
+        - label: Changes stay inside this disposable fixture
+          required: true

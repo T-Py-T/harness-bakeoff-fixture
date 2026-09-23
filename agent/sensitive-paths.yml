@@ -1,0 +1,12 @@
+# Paths agents must treat as sensitive / out of scope for this disposable fixture.
+version: 1
+deny:
+  - "**/.env"
+  - "**/.env.*"
+  - "**/credentials*"
+  - "**/secrets*"
+  - "**/*id_rsa*"
+  - "**/*.pem"
+notes:
+  - This repo is disposable Phase-0 scaffolding only.
+  - Never copy HomeLife or production material into the tree.
